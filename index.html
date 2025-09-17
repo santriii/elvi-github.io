@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elviana — Website Pribadi</title>
+  <meta name="description" content="Website pribadi Nama Anda — Tentang, Portofolio, Kontak." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* dark */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7c5cff;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg),#05060a);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:1000px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4cc9f0);display:grid;place-items:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
+    nav a:hover{color:#fff}
+
+    .card{background:linear-gradient(180deg,var(--card),#07101a);border-radius:14px;padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:22px;align-items:center}
+    .hero h1{font-size:28px;margin:0}
+    .hero p{color:var(--muted);margin-top:8px}
+    .profile{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .avatar{width:220px;height:220px;border-radius:16px;background:linear-gradient(135deg,#12202b,#102030);display:grid;place-items:center;font-size:20px}
+    .cta{display:flex;gap:10px;margin-top:8px}
+    .btn{background:var(--accent);border:none;color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    /* Sections */
+    section{margin-top:20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+    /* Skills */
+    .skill{margin-bottom:12px}
+    .skill .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+    .bar{height:10px;background:var(--glass-2);border-radius:999px;margin-top:8px;overflow:hidden}
+    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#4cc9f0);border-radius:999px}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .project h4{margin:0 0 6px 0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @eaelviana@gmail.com (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .profile{flex-direction:row}
+      .avatar{width:120px;height:120px}
+      .grid-2{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">NA</div>
+        <div>
+          <div style="font-weight:700">Nama Anda</div>
+          <div style="font-size:13px;color:var(--muted)">Profesi • Lokasi</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Tentang</a>
+        <a href="#projects">Portofolio</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero card" aria-label="hero">
+        <div>
+          <h1>Halo — Saya Nama Anda.</h1>
+          <p>Saya seorang <strong>Profesi</strong> yang fokus pada <em>bidang keahlian</em>. Saya membuat solusi yang sederhana namun berdampak. Berikut ringkasan singkat tentang saya dan beberapa proyek.</p>
+
+          <div style="margin-top:16px">
+            <div class="card" style="padding:12px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div style="font-size:13px;color:var(--muted)">Email</div>
+                  <div style="font-weight:600">nama@domain.com</div>
+                </div>
+                <div>
+                  <div style="font-size:13px;color:var(--muted)">Telepon</div>
+                  <div style="font-weight:600">+62 812-3456-7890</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="#contact">Hubungi Saya</a>
+            <a class="btn ghost" href="#projects">Lihat Proyek</a>
+          </div>
+        </div>
+
+        <aside class="profile">
+          <div class="avatar">Foto<br>Profil</div>
+          <div style="text-align:center">
+            <div style="font-weight:700">Nama Anda</div>
+            <div style="color:var(--muted);font-size:13px">Profesi • Lokasi</div>
+            <div style="margin-top:10px">
+              <a class="btn" href="/resume.pdf" download>Unduh CV</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="card">
+        <h2>Tentang Saya</h2>
+        <p style="color:var(--muted)">Tuliskan paragraf singkat mengenai latar belakang pendidikan, pengalaman kerja, minat, dan apa yang Anda cari (contoh: peluang kolaborasi atau pekerjaan).</p>
+
+        <div class="grid-2" style="margin-top:12px">
+          <div>
+            <h3>Keahlian</h3>
+            <div class="skill">
+              <div class="meta"><span>HTML &amp; CSS</span><span>90%</span></div>
+              <div class="bar"><i style="width:90%"></i></div>
+            </div>
+            <div class="skill">
+              <div class="meta"><span>JavaScript</span><span>75%</span></div>
+              <div class="bar"><i style="width:75%"></i></div>
+            </div>
+            <div class="skill">
+              <div class="meta"><span>Python / Data</span><span>65%</span></div>
+              <div class="bar"><i style="width:65%"></i></div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Pendidikan</h3>
+            <div style="color:var(--muted);margin-top:6px">Universitas / Sekolah — Gelar, Tahun</div>
+            <h3 style="margin-top:12px">Bahasa</h3>
+            <div style="color:var(--muted);margin-top:6px">Indonesia (aktif), English (komunikatif)</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="card">
+        <h2>Portofolio</h2>
+        <p style="color:var(--muted)">Beberapa proyek yang saya kerjakan — link, deskripsi singkat, dan teknologi yang digunakan.</p>
+
+        <div class="projects" style="margin-top:12px">
+          <article class="project">
+            <h4>Proyek A</h4>
+            <div style="color:var(--muted);font-size:13px">Deskripsi singkat proyek A. Tujuan, peran, dan hasil.</div>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          </article>
+
+          <article class="project">
+            <h4>Proyek B</h4>
+            <div style="color:var(--muted);font-size:13px">Deskripsi singkat proyek B.</div>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Data</span></div>
+          </article>
+
+          <article class="project">
+            <h4>Proyek C</h4>
+            <div style="color:var(--muted);font-size:13px">Deskripsi singkat proyek C.</div>
+            <div class="tags"><span class="tag">UI/UX</span><span class="tag">Figma</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>Kontak</h2>
+        <p style="color:var(--muted)">Ingin bekerja sama atau sekadar menyapa? Isi formulir di bawah atau kirim email langsung.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:12px">
+          <div>
+            <form action="mailto:nama@domain.com" method="post" enctype="text/plain">
+              <input type="text" name="name" placeholder="Nama" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="text" name="subject" placeholder="Subjek" />
+              <textarea name="message" rows="6" placeholder="Pesan..." required></textarea>
+              <div style="display:flex;gap:8px">
+                <button class="btn" type="submit">Kirim</button>
+                <button class="btn ghost" type="reset">Reset</button>
+              </div>
+            </form>
+          </div>
+
+          <aside>
+            <div class="card" style="padding:12px">
+              <h4>Kontak Cepat</h4>
+              <div style="color:var(--muted);margin-top:8px">Email: nama@domain.com</div>
+              <div style="color:var(--muted);margin-top:6px">Telepon: +62 812-3456-7890</div>
+              <div style="margin-top:10px">
+                <a href="#" style="text-decoration:none;color:var(--muted);font-size:13px">LinkedIn</a> • <a href="#" style="text-decoration:none;color:var(--muted);font-size:13px">GitHub</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer>
+        <div class="card" style="padding:12px;display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:13px;color:var(--muted)">© " + new Date().getFullYear() + " Nama Anda. Semua hak dilindungi.</div>
+          <div style="display:flex;gap:8px">
+            <a href="#" style="color:var(--muted);text-decoration:none">Twitter</a>
+            <a href="#" style="color:var(--muted);text-decoration:none">Instagram</a>
+            <a href="#" style="color:var(--muted);text-decoration:none">GitHub</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Simple JS: Replace year placeholder in footer (for clients that don't process the string above)
+    (function(){
+      try{
+        var footer = document.querySelector('footer div div');
+        if(footer) footer.innerText = '© ' + new Date().getFullYear() + ' Nama Anda. Semua hak dilindungi.';
+      }catch(e){}
+    })();
+  </script>
+</body>
+</html>
